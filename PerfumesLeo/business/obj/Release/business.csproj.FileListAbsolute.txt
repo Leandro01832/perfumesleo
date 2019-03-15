@@ -1,0 +1,10 @@
+C:\Users\leand\documents\visual studio 2015\Projects\PerfumesLeo\business\bin\Release\business.dll.config
+C:\Users\leand\documents\visual studio 2015\Projects\PerfumesLeo\business\bin\Release\business.dll
+C:\Users\leand\documents\visual studio 2015\Projects\PerfumesLeo\business\bin\Release\business.pdb
+C:\Users\leand\documents\visual studio 2015\Projects\PerfumesLeo\business\bin\Release\EntityFramework.dll
+C:\Users\leand\documents\visual studio 2015\Projects\PerfumesLeo\business\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\leand\documents\visual studio 2015\Projects\PerfumesLeo\business\bin\Release\EntityFramework.xml
+C:\Users\leand\documents\visual studio 2015\Projects\PerfumesLeo\business\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\leand\documents\visual studio 2015\Projects\PerfumesLeo\business\obj\Release\business.csprojResolveAssemblyReference.cache
+C:\Users\leand\documents\visual studio 2015\Projects\PerfumesLeo\business\obj\Release\business.dll
+C:\Users\leand\documents\visual studio 2015\Projects\PerfumesLeo\business\obj\Release\business.pdb

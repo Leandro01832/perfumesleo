@@ -1,0 +1,45 @@
+﻿@model IEnumerable<business.Fragrancia>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Produto.Marca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroFragrancia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescricaoFragrancia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Produto.Marca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroFragrancia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescricaoFragrancia)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdFragrancia }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdFragrancia }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdFragrancia })
+        </td>
+    </tr>
+}
+
+</table>

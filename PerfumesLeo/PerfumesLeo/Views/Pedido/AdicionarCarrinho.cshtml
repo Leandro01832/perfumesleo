@@ -1,0 +1,45 @@
+﻿@model business.Pedido
+
+@{
+    ViewBag.Title = "AdicionarCarrinho";
+}
+
+<h2>AdicionarCarrinho</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Pedido</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.IdPedido)
+        @Html.HiddenFor(model => model.ValorPedido)
+        @Html.HiddenFor(model => model.Datapedido)
+        @Html.HiddenFor(model => model.Status)
+        @Html.HiddenFor(model => model.Produtos)
+        @Html.HiddenFor(model => model.Cliente.IdCliente)
+        
+
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Código do produto:</label>
+            <div class="col-md-10">
+                <input class="form-control" value="@ViewBag.produto" type="text" id="perfume" name="perfume" readonly />
+            </div>
+        </div>
+
+        
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Adicionar produto ao carrinho" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

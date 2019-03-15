@@ -1,0 +1,69 @@
+﻿@using PagedList.Mvc;
+
+@model PagedList.IPagedList<business.Produto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <label>Numero da Fragrância</label>
+        </th>
+        <th>
+            <label>Preço</label>
+        </th>
+        <th>
+            <label>Marca</label>
+        </th>
+        <th>
+            <label>Imagem</label>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fragrancia.NumeroFragrancia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Preco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Marca)
+        </td>
+        <td>
+            @{
+                if (item.Imagem != null)
+                {
+                    <img src="@Url.Content(item.Imagem)" alt="Image" style="width:100px;height:150px;max-width: 100%; height: auto;" />
+                }
+            }
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdProduto }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdProduto }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.IdProduto }) |
+            @Html.ActionLink("Adicionar ao carrinho", "AdicionarCarrinho", "Pedido", new { id = item.IdProduto }, new { @class = "btn btn-default" })
+        </td>
+    </tr>
+}    
+
+</table>
+
+<p class="text-primary">
+    pagina @Model.PageNumber de @Model.PageCount
+</p>
+ 
+
+  <span class="btn-group pull-right">
+      @Html.PagedListPager(Model, pagina => Url.Action("Index", new { pagina }))
+  </span>
+

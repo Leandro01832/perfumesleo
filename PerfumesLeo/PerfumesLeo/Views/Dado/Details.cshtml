@@ -1,0 +1,106 @@
+﻿@model PagSeguro.Dados
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Dados</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroPedido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroPedido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DDD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DDD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroTelefone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroTelefone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoAcesso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoAcesso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Referencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Referencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TituloPagamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TituloPagamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stringConexao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stringConexao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DadosId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,14 @@
+c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\DataContextPerfume\bin\Debug\DataContextPerfume.dll.config
+c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\DataContextPerfume\bin\Debug\DataContextPerfume.dll
+c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\DataContextPerfume\bin\Debug\DataContextPerfume.pdb
+c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\DataContextPerfume\bin\Debug\business.dll
+c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\DataContextPerfume\bin\Debug\EntityFramework.dll
+c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\DataContextPerfume\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\DataContextPerfume\bin\Debug\PagSeguro.dll
+c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\DataContextPerfume\bin\Debug\business.pdb
+c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\DataContextPerfume\bin\Debug\PagSeguro.pdb
+c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\DataContextPerfume\bin\Debug\EntityFramework.xml
+c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\DataContextPerfume\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\DataContextPerfume\obj\Debug\DataContextPerfume.csprojResolveAssemblyReference.cache
+c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\DataContextPerfume\obj\Debug\DataContextPerfume.dll
+c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\DataContextPerfume\obj\Debug\DataContextPerfume.pdb
