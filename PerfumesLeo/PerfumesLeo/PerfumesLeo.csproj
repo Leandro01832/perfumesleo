@@ -371,6 +371,10 @@
     <Content Include="Content\Imagem\8.jpg" />
     <Content Include="Content\Imagem\9.jpg" />
     <Content Include="Content\PagedList.css" />
+    <Content Include="css\carousel.css" />
+    <Content Include="css\large.css" />
+    <Content Include="css\medium.css" />
+    <Content Include="css\small.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -412,6 +416,7 @@
     <Content Include="obj\Debug\PerfumesLeo.csprojResolveAssemblyReference.cache" />
     <None Include="Properties\PublishProfiles\PerfumesLeo.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\carousel.js" />
     <Content Include="Scripts\Cep.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
