@@ -16,3 +16,13 @@ c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\PagSeguro\obj\D
 c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\PagSeguro\bin\Debug\PagSeguro.dll.config
 c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\PagSeguro\bin\Debug\PagSeguro.dll
 c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\PagSeguro\bin\Debug\PagSeguro.pdb
+D:\codigo-github\perfumes\PerfumesLeo\PagSeguro\bin\Debug\PagSeguro.dll.config
+D:\codigo-github\perfumes\PerfumesLeo\PagSeguro\bin\Debug\PagSeguro.dll
+D:\codigo-github\perfumes\PerfumesLeo\PagSeguro\bin\Debug\PagSeguro.pdb
+D:\codigo-github\perfumes\PerfumesLeo\PagSeguro\obj\Debug\PagSeguro.csprojAssemblyReference.cache
+D:\codigo-github\perfumes\PerfumesLeo\PagSeguro\obj\Debug\PagSeguro.frPrincipal.resources
+D:\codigo-github\perfumes\PerfumesLeo\PagSeguro\obj\Debug\PagSeguro.Properties.Resources.resources
+D:\codigo-github\perfumes\PerfumesLeo\PagSeguro\obj\Debug\PagSeguro.csproj.GenerateResource.cache
+D:\codigo-github\perfumes\PerfumesLeo\PagSeguro\obj\Debug\PagSeguro.csproj.CoreCompileInputs.cache
+D:\codigo-github\perfumes\PerfumesLeo\PagSeguro\obj\Debug\PagSeguro.dll
+D:\codigo-github\perfumes\PerfumesLeo\PagSeguro\obj\Debug\PagSeguro.pdb

@@ -1,0 +1,180 @@
+﻿@model business.Pedido
+
+@{
+    ViewBag.Title = "Cadastro";
+}
+
+<h3>Cadastro</h3>
+
+
+@using (Html.BeginForm("Resumo", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(model => model.IdPedido)
+    @Html.HiddenFor(model => model.Cliente.IdCliente)
+    @Html.HiddenFor(model => model.Cliente.Telefone.IdTelefone)
+    @Html.HiddenFor(model => model.Cliente.Endereco.IdEndereco)
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label" for="nomeCliente">Primeiro nome</label>
+                    @Html.EditorFor(model => model.Cliente.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Cliente.FirstName, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="nomeCliente">Segundo nome</label>
+                    @Html.EditorFor(model => model.Cliente.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Cliente.LastName, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="email">Email</label>
+                    @Html.EditorFor(model => model.Cliente.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Cliente.UserName, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="email">Cpf</label>
+                    @Html.EditorFor(model => model.Cliente.Cpf, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Cliente.Cpf, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="telefone">Telefone</label>
+                    @Html.EditorFor(model => model.Cliente.Telefone.Fone, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Cliente.Telefone.Fone, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label" for="endereco">Rua</label>
+                    @Html.EditorFor(model => model.Cliente.Endereco.Rua, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Cliente.Endereco.Rua, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="complemento">Complemento</label>
+                    @Html.EditorFor(model => model.Cliente.Endereco.Complemento, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Cliente.Endereco.Complemento, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="bairro">Bairro</label>
+                    @Html.EditorFor(model => model.Cliente.Endereco.Bairro, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Cliente.Endereco.Bairro, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="bairro">Numero casa</label>
+                    @Html.EditorFor(model => model.Cliente.Endereco.Numero, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Cliente.Endereco.Numero, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label" for="municipio">Município</label>
+                    @Html.EditorFor(model => model.Cliente.Endereco.Cidade, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Cliente.Endereco.Cidade, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="UF">UF</label>
+                    @Html.DropDownListFor(model => model.Cliente.Endereco.Estado, new List<SelectListItem>
+                {
+                new SelectListItem{ Value="AC", Text= "Acre" },
+                new SelectListItem{ Value="AL", Text= "Alagoas" },
+                new SelectListItem{ Value="AP", Text= "Amapá" },
+                new SelectListItem{ Value="AM", Text= "Amazonas" },
+                new SelectListItem{ Value="BA", Text= "Bahia" },
+                new SelectListItem{ Value="CE", Text= "Ceará" },
+                new SelectListItem{ Value="DF", Text= "Distrito Federal" },
+                new SelectListItem{ Value="ES", Text= "Espírito Santo" },
+                new SelectListItem{ Value="GO", Text= "Goiás" },
+                new SelectListItem{ Value="MA", Text="aMaranhão" },
+                new SelectListItem{ Value="MT", Text="aMato Grosso" },
+                new SelectListItem{ Value="MS", Text="aMato Grosso do Sul" },
+                new SelectListItem{ Value="MG", Text= "Minas Gerais" },
+                new SelectListItem{ Value="PA", Text= "Pará" },
+                new SelectListItem{ Value="PB", Text= "Paraíba" },
+                new SelectListItem{ Value="PR", Text= "Paraná" },
+                new SelectListItem{ Value="PE", Text= "Pernambuco" },
+                new SelectListItem{ Value="PI", Text= "Piauí" },
+                new SelectListItem{ Value="RJ", Text= "Rio de Janeiro" },
+                new SelectListItem{ Value="RN", Text= "Rio Grande do Norte" },
+                new SelectListItem{ Value="RS", Text= "Rio Grande do Sul" },
+                new SelectListItem{ Value="RO", Text="Rondônia" },
+                new SelectListItem{ Value="RR", Text="Roraima" },
+                new SelectListItem{ Value="SC", Text="Santa Catarina" },
+                new SelectListItem{ Value="SP", Text="São Paulo" },
+                new SelectListItem{ Value="SE", Text="Sergipe" },
+                new SelectListItem{ Value="TO", Text="Tocantins" },
+                }, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Cliente.Endereco.Estado, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="cep">CEP</label>
+                    @Html.EditorFor(model => model.Cliente.Endereco.Cep, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Cliente.Endereco.Cep, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-md-4">
+                    <a id="btnsend" class="btn btn-success">Consultar frete</a>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12" id="divValor"></div>
+                </div>
+                <br />
+
+                <div class="form-group">
+                    @Html.ActionLink("Continuar comprando", "Index", "Home", null, new { @class = "btn btn-primary" })
+                </div>
+                <div class="form-group">
+                    <button type="submit"
+                            class="btn btn-success">
+                        Finalizar Pedido
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+@section scripts{
+
+    <script type="text/javascript">
+
+        var precoprod = document.getElementById("precoprodutos");
+        var frete = document.getElementById("ValorFrete");
+        var precototal = document.getElementById("precototal");
+        
+        $("#btnsend").click(function () {
+
+            let token = $('[name=__RequestVerificationToken]').val();
+
+            let valorCep = $("#Cliente_Endereco_Cep").val();
+
+            debugger;
+
+            $.ajax({
+                url: '@Url.Action("CorreiosCalc","Home")',
+                type: 'POST',
+                dataType: 'json',
+                data: { __RequestVerificationToken: token, cep: valorCep },
+                success: function (result) {
+                    var v = parseFloat(result[0]) + parseFloat($("#precoprodutos").val());
+                    $("#divValor").html("<label id='valor'> Valor do frete: R$ "
+                        + result[0]
+                        + "    Prazo de entrega " + result[1] + "</label> ");
+                  //  $("#v").html("<label class='control-label col-md-3'>Valor do frete:  </label> <input class='form-control' id='ValorFrete' name='ValorFrete' type='text' value='" + result[0] + "' readonly> </input>");
+                  //  $("#precototal").val(v.toFixed(2));
+                },
+                error: function (xhr, exception) {
+                    alert("Erro ao calcular prazo!")
+                }
+            });
+
+
+
+
+
+        });
+    
+
+    </script>
+}

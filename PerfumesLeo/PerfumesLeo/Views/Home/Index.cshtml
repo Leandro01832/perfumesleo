@@ -1,173 +1,83 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
-}   
+    ViewData["Title"] = "Carrossel";
+}
+@model IEnumerable<business.Produto>
 
-<div class="jumbotron">
-    <div class="row">
-        <div class="col-md-12">
-            <div id="carouselsite" class="carousel" data-ride="carousel">
+<h3>Catálogo</h3>
 
-                <div class="carousel-inner">
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/1.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
+<div id="my-carousel" class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+        @{
+            const int TAMANHO_PAGINA = 4;
+
+            int paginas = (int)Math.Ceiling((double)Model.Count() / TAMANHO_PAGINA);
+        }
+
+        @for (int pagina = 0; pagina < paginas; pagina++)
+        {
+
+            <div class="item @(pagina == 0 ? "active" : "")">
+                <div class="row">
+
+                    @{
+                        var produtosDaPagina = Model.Skip(pagina * TAMANHO_PAGINA).Take(TAMANHO_PAGINA);
+                    }
+
+                    @foreach (var produto in produtosDaPagina)
+                    {
+
+                        <div class="col-md-3 col-sm-3 col-lg-3">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <img class="img-produto-carrossel" src="/images/produtos/large_@(produto.IdProduto).jpg" />
+                                </div>
+                                <div class="panel-footer produto-footer">
+                                    <div class="produto-nome">@produto.Nome</div>
+                                    <div><h4><strong>R$ @produto.Preco</strong></h4></div>
+                                    <div class="text-center">
+
+                                        @Html.ActionLink("Adicionar", "Carrinho", "Home",
+                                       new { codigo = produto.IdProduto }, null)
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/2.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/3.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/4.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/5.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/6.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/7.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/8.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/9.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/10.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/11.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/12.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/13.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/14.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/15.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/16.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/17.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/18.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/119.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/20.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/21.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/22.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <img class="img-responsive" src="~/Content/Imagem/23.jpg" alt="imagem" style="height:100%;" />
-                        <div class="carousel-caption">
-                        </div>
-                    </div>                  
+                    }
 
                 </div>
-
             </div>
 
-        </div>
+        }
     </div>
+
+    <!-- Controls -->
+    <div class="jumbotron" style="width: 8em; height:4em;">
+        
+        <a class="left" href="#my-carousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right" href="#my-carousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    
 </div>
 
 @section scripts{
 
 
     <script type="text/javascript">
-
         $(document).ready(function () {
-
+            //$(".carousel").css("height", "700px");
 	$('.carousel-item:eq(0)').addClass("ativo").show();
-
 	var texto = $(".ativo").attr("alt");
 	$('.carousel-item').prepend("<p>" + texto + "</p>");
-
 	setInterval(slide, 15000);
-
 	function slide(){
 	    if ($('.ativo').next().size()) {
 	        $('.ativo').fadeOut().removeClass("ativo").next().addClass("ativo");
@@ -177,18 +87,10 @@
 		    $('.ativo').fadeOut().removeClass("ativo");
 		    $('.carousel-item:eq(0)').delay(5500).fadeIn().addClass("ativo");
 		}
-
 		var texto = $(".ativo img").attr("alt");
-
 		$('.carousel-item p').hide().html(texto).delay(1500).fadeIn();
-
 	}
-
-
-
 });
-
     </script>
 
 }
-

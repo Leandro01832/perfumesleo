@@ -53,7 +53,9 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Endereco.cs" />
     <Compile Include="Fragrancia.cs" />
+    <Compile Include="ItemPedido.cs" />
     <Compile Include="Pedido.cs" />
+    <Compile Include="Perfume.cs" />
     <Compile Include="Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Telefone.cs" />

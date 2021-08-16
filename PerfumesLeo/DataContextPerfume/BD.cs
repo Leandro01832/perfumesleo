@@ -21,6 +21,7 @@ namespace DataContextPerfume
         public DbSet<Telefone> Telefone { get; set; }
         public DbSet<Endereco> Endereco { get; set; }
         public DbSet<Produto> Produto { get; set; }
+        public DbSet<Perfume> Perfume { get; set; }
         public DbSet<Pedido> Pedido { get; set; }
         public DbSet<Dados> Dados { get; set; }
 

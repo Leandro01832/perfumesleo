@@ -8,3 +8,15 @@ c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\business\bin\De
 c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\business\obj\Debug\business.csprojResolveAssemblyReference.cache
 c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\business\obj\Debug\business.dll
 c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\business\obj\Debug\business.pdb
+D:\codigo-github\perfumes\PerfumesLeo\business\bin\Debug\business.dll.config
+D:\codigo-github\perfumes\PerfumesLeo\business\bin\Debug\business.dll
+D:\codigo-github\perfumes\PerfumesLeo\business\bin\Debug\business.pdb
+D:\codigo-github\perfumes\PerfumesLeo\business\bin\Debug\EntityFramework.dll
+D:\codigo-github\perfumes\PerfumesLeo\business\bin\Debug\EntityFramework.SqlServer.dll
+D:\codigo-github\perfumes\PerfumesLeo\business\bin\Debug\EntityFramework.xml
+D:\codigo-github\perfumes\PerfumesLeo\business\bin\Debug\EntityFramework.SqlServer.xml
+D:\codigo-github\perfumes\PerfumesLeo\business\obj\Debug\business.csprojAssemblyReference.cache
+D:\codigo-github\perfumes\PerfumesLeo\business\obj\Debug\business.csproj.CoreCompileInputs.cache
+D:\codigo-github\perfumes\PerfumesLeo\business\obj\Debug\business.csproj.CopyComplete
+D:\codigo-github\perfumes\PerfumesLeo\business\obj\Debug\business.dll
+D:\codigo-github\perfumes\PerfumesLeo\business\obj\Debug\business.pdb

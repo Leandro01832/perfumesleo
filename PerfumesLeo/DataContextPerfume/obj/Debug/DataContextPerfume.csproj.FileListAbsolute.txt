@@ -12,3 +12,21 @@ c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\DataContextPerf
 c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\DataContextPerfume\obj\Debug\DataContextPerfume.csprojResolveAssemblyReference.cache
 c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\DataContextPerfume\obj\Debug\DataContextPerfume.dll
 c:\users\leand\documents\visual studio 2015\Projects\PerfumesLeo\DataContextPerfume\obj\Debug\DataContextPerfume.pdb
+D:\codigo-github\perfumes\PerfumesLeo\DataContextPerfume\bin\Debug\DataContextPerfume.dll.config
+D:\codigo-github\perfumes\PerfumesLeo\DataContextPerfume\bin\Debug\DataContextPerfume.dll
+D:\codigo-github\perfumes\PerfumesLeo\DataContextPerfume\bin\Debug\DataContextPerfume.pdb
+D:\codigo-github\perfumes\PerfumesLeo\DataContextPerfume\bin\Debug\business.dll
+D:\codigo-github\perfumes\PerfumesLeo\DataContextPerfume\bin\Debug\EntityFramework.dll
+D:\codigo-github\perfumes\PerfumesLeo\DataContextPerfume\bin\Debug\EntityFramework.SqlServer.dll
+D:\codigo-github\perfumes\PerfumesLeo\DataContextPerfume\bin\Debug\PagSeguro.dll
+D:\codigo-github\perfumes\PerfumesLeo\DataContextPerfume\bin\Debug\business.pdb
+D:\codigo-github\perfumes\PerfumesLeo\DataContextPerfume\bin\Debug\business.dll.config
+D:\codigo-github\perfumes\PerfumesLeo\DataContextPerfume\bin\Debug\PagSeguro.pdb
+D:\codigo-github\perfumes\PerfumesLeo\DataContextPerfume\bin\Debug\PagSeguro.dll.config
+D:\codigo-github\perfumes\PerfumesLeo\DataContextPerfume\bin\Debug\EntityFramework.xml
+D:\codigo-github\perfumes\PerfumesLeo\DataContextPerfume\bin\Debug\EntityFramework.SqlServer.xml
+D:\codigo-github\perfumes\PerfumesLeo\DataContextPerfume\obj\Debug\DataContextPerfume.csprojAssemblyReference.cache
+D:\codigo-github\perfumes\PerfumesLeo\DataContextPerfume\obj\Debug\DataContextPerfume.csproj.CoreCompileInputs.cache
+D:\codigo-github\perfumes\PerfumesLeo\DataContextPerfume\obj\Debug\DataContextPerfume.csproj.CopyComplete
+D:\codigo-github\perfumes\PerfumesLeo\DataContextPerfume\obj\Debug\DataContextPerfume.dll
+D:\codigo-github\perfumes\PerfumesLeo\DataContextPerfume\obj\Debug\DataContextPerfume.pdb

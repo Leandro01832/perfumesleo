@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1525
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerfumesLeo", "PerfumesLeo\PerfumesLeo.csproj", "{8DECC305-BCC6-4C80-935E-E2464274B40D}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataContextPerfume", "DataContextPerfume\DataContextPerfume.csproj", "{D48C25C8-8F03-4DFF-99E2-DE5BBA3167A2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagSeguro", "PagSeguro\PagSeguro.csproj", "{835B8F67-9BB3-4430-9795-2E8FCC2C41D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{322536F7-9570-4CAC-AD4B-F7F50372056D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,8 +35,15 @@ Global
 		{835B8F67-9BB3-4430-9795-2E8FCC2C41D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{835B8F67-9BB3-4430-9795-2E8FCC2C41D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{835B8F67-9BB3-4430-9795-2E8FCC2C41D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{322536F7-9570-4CAC-AD4B-F7F50372056D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{322536F7-9570-4CAC-AD4B-F7F50372056D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{322536F7-9570-4CAC-AD4B-F7F50372056D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{322536F7-9570-4CAC-AD4B-F7F50372056D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C0492604-B68E-42AE-BE67-49F89F054603}
 	EndGlobalSection
 EndGlobal
