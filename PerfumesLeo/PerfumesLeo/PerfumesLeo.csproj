@@ -388,6 +388,7 @@
     <Content Include="Content\Imagem\7.jpg" />
     <Content Include="Content\Imagem\8.jpg" />
     <Content Include="Content\Imagem\9.jpg" />
+    <Content Include="Content\Imagem\loader.gif" />
     <Content Include="Content\PagedList.css" />
     <Content Include="css\carousel.css" />
     <Content Include="css\large.css" />
@@ -443,6 +444,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\loader.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -505,6 +507,7 @@
     <Content Include="Views\Home\Carrinho.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Resumo.cshtml" />
+    <Content Include="Views\Home\RetornaPedido.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

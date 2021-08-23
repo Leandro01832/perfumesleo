@@ -1,10 +1,15 @@
 ﻿using System;
 using System.Globalization;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using business;
+using DataContextPerfume;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
@@ -134,6 +139,24 @@ namespace PerfumesLeo.Controllers
             }
         }
 
+        public Task SendMarketingAsync(IdentityMessage message)
+        {
+            MailMessage mail = new MailMessage("leandro91luis@gmail.com", message.Destination);
+
+            mail.Subject = message.Subject;
+            mail.Body = message.Body;
+            mail.IsBodyHtml = true;
+            mail.SubjectEncoding = Encoding.GetEncoding("UTF-8");
+            mail.BodyEncoding = Encoding.GetEncoding("UTF-8");
+
+            SmtpClient cliente = new SmtpClient("smtp.gmail.com", 587);
+            cliente.UseDefaultCredentials = false;
+            cliente.Credentials = new NetworkCredential("leandro91luis@gmail.com", "Gasparzinho2020");
+            cliente.EnableSsl = true;
+
+            return cliente.SendMailAsync(mail);
+        }
+
         //
         // GET: /Account/Register
         [AllowAnonymous]
@@ -155,13 +178,19 @@ namespace PerfumesLeo.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    BD banco = new BD();
+                    var cli = new Cliente
+                    {
+                        UserName = model.Email                        
+                    };
+                    banco.Cliente.Add(cli); await banco.SaveChangesAsync();
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                     string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                     var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                     await UserManager.SendEmailAsync(user.Id, "Confirme sua conta", "Por favor confirme sua conta clicando <a href=\"" + callbackUrl + "\">aqui</a>");
 
                     return RedirectToAction("Index", "Home");
                 }

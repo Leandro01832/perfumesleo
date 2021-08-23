@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
@@ -18,8 +20,17 @@ namespace PerfumesLeo
     {
         public Task SendAsync(IdentityMessage message)
         {
-            // Plug in your email service here to send an email.
-            return Task.FromResult(0);
+            MailMessage mail = new MailMessage("leandro91luis@gmail.com", message.Destination);
+
+            mail.Subject = message.Subject;
+            mail.Body = message.Body;
+            mail.IsBodyHtml = true;
+            SmtpClient cliente = new SmtpClient("smtp.gmail.com", 587);
+            cliente.UseDefaultCredentials = false;
+            cliente.Credentials = new NetworkCredential("leandro91luis@gmail.com", "Gasparzinho2020");
+            cliente.EnableSsl = true;
+
+            return cliente.SendMailAsync(mail);
         }
     }
 
@@ -53,8 +64,8 @@ namespace PerfumesLeo
             // Configure validation logic for passwords
             manager.PasswordValidator = new PasswordValidator
             {
-                RequiredLength = 6,
-                RequireNonLetterOrDigit = true,
+                RequiredLength = 8,
+                RequireNonLetterOrDigit = false,
                 RequireDigit = true,
                 RequireLowercase = true,
                 RequireUppercase = true,
